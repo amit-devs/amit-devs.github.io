@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Amit's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link href="./dist/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav
+        class="sticky top-0 z-40 bg-[var(--color-bg-light)]/80 dark:bg-[var(--color-bg-dark)]/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-display font-bold text-2xl tracking-tight">Amit<span
+                    class="text-[var(--color-brand-light)] dark:text-[var(--color-brand-dark)]">.</span></a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Me</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="github.html" class="nav-link">GitHub</a>
+                <a href="contact.html"
+                    class="nav-link text-[var(--color-brand-light)] dark:text-[var(--color-brand-dark)]">Contact</a>
+
+                <div class="flex items-center gap-3 pl-4 border-l border-slate-200 dark:border-slate-800">
+                    <button id="sidebar-toggle"
+                        class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-indigo-600/5 dark:bg-white/5 border border-indigo-600/10 dark:border-white/10 hover:bg-indigo-600/10 dark:hover:bg-white/10 transition-all duration-300 text-sm font-semibold text-indigo-600 dark:text-gray-300 hover:dark:text-white">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                        More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden flex items-center">
+                <button onclick="document.getElementById('sidebar-toggle').click()"
+                    class="text-[var(--color-text-light)] dark:text-[var(--color-text-dark)] focus:outline-none p-2 rounded-lg bg-white/5 border border-white/10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar Drawer (Modern Right-Side Glassmorphism) -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <aside id="sidebar" class="sidebar px-8 py-6">
+        <!-- Close Button -->
+        <button id="sidebar-close"
+            class="absolute top-6 right-6 p-2 rounded-full text-gray-400 hover:text-white hover:scale-110 transition-all duration-200">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Profile Section (Centered) -->
+        <div class="flex flex-col items-center mt-10 text-center gap-4">
+            <div class="relative group">
+                <div
+                    class="absolute inset-0 bg-indigo-500/20 blur-2xl rounded-full group-hover:bg-indigo-500/30 transition-all duration-500">
+                </div>
+                <div
+                    class="relative w-24 h-24 rounded-full bg-slate-100 dark:bg-slate-800 border-2 border-indigo-400/40 ring-4 ring-indigo-400/10 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(99,102,241,0.2)] dark:shadow-[0_0_30px_rgba(99,102,241,0.3)] transition-all duration-500 group-hover:scale-105 group-hover:shadow-[0_0_40px_rgba(99,102,241,0.4)] dark:group-hover:shadow-[0_0_40px_rgba(99,102,241,0.5)]">
+
+                    <!-- ADD PHOTO HERE: [Profile Avatar for Sidebar] -->
+                    <img src="/files/img/college.jpeg" alt="Profile Photo">
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white tracking-tight mb-1">Amit</h3>
+                <p
+                    class="text-xs font-semibold text-indigo-400/80 uppercase tracking-widest px-3 py-1 bg-indigo-500/10 rounded-full inline-block">
+                    Computer Science Student</p>
+            </div>
+        </div>
+
+        <!-- Navigation Section -->
+        <div class="flex flex-col flex-1 gap-6">
+            <!-- Mobile Main Nav (Visible only on small screens) -->
+            <div class="space-y-4 md:hidden">
+                <h4 class="text-[10px] uppercase font-bold text-slate-500 tracking-[0.2em] mt-8 mb-4">Main Menu</h4>
+                <nav class="flex flex-col gap-2">
+                    <a href="index.html"
+                        class="p-3 rounded-xl hover:bg-indigo-500/5 dark:hover:bg-white/5 transition-all duration-300 text-sm font-semibold text-slate-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white">Home</a>
+                    <a href="about.html"
+                        class="p-3 rounded-xl hover:bg-indigo-500/5 dark:hover:bg-white/5 transition-all duration-300 text-sm font-semibold text-slate-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white">About
+                        Me</a>
+                    <a href="projects.html"
+                        class="p-3 rounded-xl hover:bg-indigo-500/5 dark:hover:bg-white/5 transition-all duration-300 text-sm font-semibold text-slate-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white">Projects</a>
+                    <a href="github.html"
+                        class="p-3 rounded-xl hover:bg-indigo-500/5 dark:hover:bg-white/5 transition-all duration-300 text-sm font-semibold text-slate-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white">GitHub</a>
+                    <a href="contact.html"
+                        class="p-3 rounded-xl hover:bg-indigo-500/5 dark:hover:bg-white/5 transition-all duration-300 text-sm font-semibold text-slate-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white">Contact</a>
+                </nav>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="text-[10px] uppercase font-bold text-slate-500 tracking-[0.2em] md:mt-8 mb-4">More Options
+                </h4>
+                <nav class="flex flex-col gap-2">
+                    <a href="achievements.html"
+                        class="group flex items-center justify-between p-3 rounded-xl hover:bg-indigo-500/5 dark:hover:bg-white/5 transition-all duration-300">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-600 dark:text-yellow-500 group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.563.563 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.563.563 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span
+                                class="text-sm font-semibold text-slate-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-white transition-colors">Achievements</span>
+                        </div>
+                        <svg class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <a href="certificates.html"
+                        class="group flex items-center justify-between p-3 rounded-xl hover:bg-indigo-500/5 dark:hover:bg-white/5 transition-all duration-300">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-500 group-hover:scale-110 transition-transform">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-2.083 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946 2.083 3.42 3.42 0 013.137 3.137 3.42 3.42 0 002.083 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-2.083 1.946 3.42 3.42 0 01-3.137 3.137 3.42 3.42 0 00-1.946 2.083 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-2.083 3.42 3.42 0 01-3.137-3.137 3.42 3.42 0 00-2.083-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 002.083-1.946 3.42 3.42 0 013.137-3.137z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span
+                                class="text-sm font-semibold text-slate-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-white transition-colors">Certificates</span>
+                        </div>
+                        <svg class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <a href="about.html#skills"
+                        class="group flex items-center justify-between p-3 rounded-xl hover:bg-indigo-500/5 dark:hover:bg-white/5 transition-all duration-300">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-500 group-hover:scale-110 transition-transform">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <span
+                                class="text-sm font-semibold text-slate-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-white transition-colors">Skills</span>
+                        </div>
+                        <svg class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+
+                    <!-- ADD LINK HERE: [Resume Document (PDF)] -->
+                    <a href="/files/doc/porfolio_resume.pdf" target="_blank"
+                        class="group flex items-center justify-between p-3 rounded-xl hover:bg-indigo-500/5 dark:hover:bg-white/5 transition-all duration-300 mb-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-500 group-hover:scale-110 transition-transform">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span
+                                class="text-sm font-semibold text-slate-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-white transition-colors">View
+                                Resume</span>
+                        </div>
+                        <svg class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Social Profiles Section -->
+        <div class="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800">
+            <h4 class="text-[10px] uppercase font-bold text-slate-500 tracking-[0.2em] mb-4">Social Profiles</h4>
+            <div class="flex items-center gap-3">
+                <!-- ADD LINK HERE: [GitHub Profile] -->
+                <a href="https://github.com/amit-devs" target="_blank"
+                    class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 hover:bg-indigo-500/10 dark:hover:bg-indigo-500/20 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200 dark:border-white/10 transition-all duration-300 hover:-translate-y-1">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                </a>
+                <!-- ADD LINK HERE: [LinkedIn Profile] -->
+                <a href="https://www.linkedin.com/in/amit-tiwari-bb435128b" target="_blank"
+                    class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 hover:bg-indigo-500/10 dark:hover:bg-indigo-500/20 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200 dark:border-white/10 transition-all duration-300 hover:-translate-y-1">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <!-- ADD LINK HERE: [Email Address] -->
+                <a href="mailto:amitbtiwari185@gmail.com"
+                    class="p-2.5 rounded-xl bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 hover:bg-indigo-500/10 dark:hover:bg-indigo-500/20 hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200 dark:border-white/10 transition-all duration-300 hover:-translate-y-1"
+                    title="Email">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-20 mb-12">
+
+        <div class="flex flex-col lg:flex-row gap-16">
+
+            <!-- Left Column: Contact Info -->
+            <div class="w-full lg:w-1/3">
+                <h1 class="text-4xl font-bold mb-6 text-gray-900 dark:text-white">Let's <span
+                        class="text-blue-400">Talk</span></h1>
+                <p class="text-gray-600 dark:text-gray-400 mt-4 mb-10 text-lg leading-relaxed max-w-md">
+                    Have an interesting project or an internship opportunity? I'd love to hear from you. Feel free to
+                    contact me using the provided details or through the form.
+                </p>
+
+                <div class="space-y-4">
+                    <a href="mailto:amitbtiwari185@gmail.com"
+                        class="flex items-center gap-4 group p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-all border border-transparent dark:hover:border-slate-700">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-500/10 group-hover:bg-blue-500/20 text-blue-500 flex items-center justify-center transition-colors shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-500 uppercase tracking-wider mb-1">Email</h4>
+                            <!-- ADD LINK HERE: [Personal Email] -->
+                            <span
+                                class="text-lg font-medium text-gray-900 dark:text-gray-200 group-hover:text-blue-500 transition-colors">amitbtiwari185@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/amit-devs" target="_blank"
+                        class="flex items-center gap-4 group p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-all border border-transparent dark:hover:border-slate-700">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-500/10 group-hover:bg-blue-500/20 text-blue-500 flex items-center justify-center transition-colors shrink-0">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-500 uppercase tracking-wider mb-1">GitHub</h4>
+                            <span
+                                class="text-lg font-medium text-gray-900 dark:text-gray-200 group-hover:text-blue-500 transition-colors">github.com/amit-devs</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/amit-tiwari-bb435128b" target="_blank"
+                        class="flex items-center gap-4 group p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-all border border-transparent dark:hover:border-slate-700">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-500/10 group-hover:bg-blue-500/20 text-blue-500 flex items-center justify-center transition-colors shrink-0">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-500 uppercase tracking-wider mb-1">LinkedIn</h4>
+                            <!-- ADD LINK HERE: [LinkedIn Profile] -->
+                            <span
+                                class="text-lg font-medium text-gray-900 dark:text-gray-200 group-hover:text-blue-500 transition-colors">linkedin.com/in/amit-tiwari</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="w-full lg:w-2/3">
+                <div
+                    class="rounded-xl border border-slate-700 p-8 bg-slate-800/50 hover:border-blue-400 transition-colors relative overflow-hidden group">
+                    <!-- Subtle background decoration for right panel -->
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-slate-200 dark:bg-slate-800/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none opacity-50">
+                    </div>
+
+                    <form id="contactForm" class="space-y-6 relative z-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="name" class="font-bold text-sm text-gray-300 tracking-wide">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="email" class="font-bold text-sm text-gray-300 tracking-wide">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="font-bold text-sm text-gray-300 tracking-wide">Message</label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all resize-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="bg-blue-500 text-white w-full md:w-auto px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition flex justify-center items-center gap-2 group/btn">
+                            <span>Send Message</span>
+                            <svg class="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+
+                        <div id="successMessage"
+                            class="hidden mt-4 text-green-400 flex items-center gap-2 font-medium bg-green-500/10 p-3 rounded-lg border border-green-500/20 w-fit">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Message Sent Successfully!
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Include EmailJS SDK -->
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                <script type="text/javascript">
+                    (function () {
+                        // ADD YOUR EMAILJS PUBLIC KEY HERE
+                        emailjs.init("JHsmQWmHmqj5WJwhm");
+                    })();
+                </script>
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const btn = e.target.querySelector('button[type="submit"]');
+                        const originalText = btn.innerHTML;
+                        btn.innerHTML = `<svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> <span>Sending...</span>`;
+                        btn.disabled = true;
+
+                        // ADD YOUR EMAILJS SERVICE ID AND TEMPLATE ID HERE
+                        emailjs.sendForm('service_424cq5q', 'template_2b1rzgf', this)
+                            .then(() => {
+                                btn.innerHTML = originalText;
+                                btn.disabled = false;
+                                e.target.reset();
+                                document.getElementById('successMessage').classList.remove('hidden');
+                                setTimeout(() => document.getElementById('successMessage').classList.add('hidden'), 5000);
+                            }, (error) => {
+                                btn.innerHTML = originalText;
+                                btn.disabled = false;
+                                alert('Failed to send the message. Please ensure your EmailJS details are correctly configured.');
+                                console.log('FAILED...', error);
+                            });
+                    });
+                </script>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="bg-[var(--color-card-light)] dark:bg-[var(--color-card-dark)] py-12 mt-12 border-t border-gray-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-gray-500 font-medium">
+                &copy;
+                <script>document.write(new Date().getFullYear())</script> Amit. All rights reserved.
+            </p>
+            <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                <a href="https://github.com/amit-devs" target="_blank"
+                    class="text-gray-500 dark:text-gray-400 hover:text-[var(--color-brand-light)] dark:hover:text-[var(--color-brand-dark)] transition-colors font-medium">GitHub</a>
+                <a href="https://www.linkedin.com/in/amit-tiwari-bb435128b" target="_blank"
+                    class="text-gray-500 dark:text-gray-400 hover:text-[var(--color-brand-light)] dark:hover:text-[var(--color-brand-dark)] transition-colors font-medium">LinkedIn</a>
+                <a href="mailto:amitbtiwari185@gmail.com"
+                    class="text-gray-500 dark:text-gray-400 hover:text-[var(--color-brand-light)] dark:hover:text-[var(--color-brand-dark)] transition-colors font-medium">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
